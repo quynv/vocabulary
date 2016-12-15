@@ -6,7 +6,7 @@ import sys
 if sys.version_info >= (3,4):
     import importlib
     importlib.reload(sys)
-elif sys.version_info <= (3.3) && sys.version_info >= (3.0):
+elif sys.version_info <= (3.3) and sys.version_info >= (3.0):
     import imp
     imp.reload(sys)
 else:
