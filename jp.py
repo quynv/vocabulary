@@ -3,16 +3,15 @@
 import json
 import random
 import sys  
-import platform
-current_version = platform.python_version()
-if current_version >= '3.4':
+if sys.version_info >= (3,4):
     import importlib
     importlib.reload(sys)
-elif current_version <= '3.3':
+elif sys.version_info <= (3.3) and sys.version_info >= (3.0):
     import imp
     imp.reload(sys)
 else:
     reload(sys)
+    sys.setdefaultencoding('utf-8')
 
 def get_vocabulary():
     data = None
