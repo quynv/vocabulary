@@ -6,8 +6,19 @@ cd vocabulary
 .\run.sh
 
 ```
-#Install(Python 3.5)
+#Install(Python # 2.*)
+Add this line to file jp.py
+For >= Python3.4:
+```
+import importlib
+importlib.reload(module)
+```
 
-add ```from imp import reload``` to jp.py
+For <= Python3.3:
+```
+import imp
+imp.reload(module)
+```
+
 
 Try it and feel!!!!!!!!!!!!
